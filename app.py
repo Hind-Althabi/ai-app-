@@ -14,7 +14,7 @@ app = Flask(__name__)
 #openai.api_key  = os.getenv('OPENAI_API_KEY')
 
 # Set up OpenAI API credentials
-API_KEY = "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"
+API_KEY = "sk-PNa"
 
 
 # Define the default route to return the index.html file
@@ -28,7 +28,6 @@ def api():
     # Get the message from the POST request
     message = request.json.get("message")
     # Send the message to OpenAI's API and receive the response
-    
     completion = openai.ChatCompletion.create(
     model="gpt-3.5-turbo",
     messages=[
